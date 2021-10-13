@@ -1,7 +1,7 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {API_KEY, API_URL, IMG_BASE_URL} from "../Config";
 import GridCards from "./commons/GridCards";
-import {Row} from 'antd';
+import { Grid } from "@material-ui/core";
 
 function MoviePart() {
 
@@ -36,18 +36,18 @@ function MoviePart() {
                     <h2>Movies by latest</h2>
                     <hr/>
                     {/* Movie List */}
-                    <Row gutter={[16,16]}>
+                    <Grid container spacing={2}>
                         {Movies && Movies.map((movie, index) => (
-                            <React.Fragment key = {index}>
-                                <GridCards
+                        <Grid item xs={8} sm={6} md={3} key={index}>
+                        <GridCards
                                     img = {movie.poster_path ? `${IMG_BASE_URL}w500${movie.poster_path}` : null}
                                     movieId = {movie.id}
                                     movieName = {movie.original_title}
                                 />
-                            </React.Fragment>
+                        </Grid>
                         ))}
 
-                    </Row>
+                    </Grid>
 
                 </div>
 
