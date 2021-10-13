@@ -1,3 +1,9 @@
-# MicroFrontDev
 
-npm i antd @types/antd  루트 터미널 경로에 입력
+# [ MicroFrontDev ]
+
+# Install
+1. npm i 
+2. npm install webpack webpack-cli webpack-server html-webpack-plugin
+
+# Run
+npm run webpack
