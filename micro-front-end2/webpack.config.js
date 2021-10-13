@@ -6,6 +6,24 @@ module.exports = {
     devServer: {
         port : 8082
     },
+    // loader 설정
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            "@babel/preset-env",
+                            "@babel/preset-react"
+                        ]
+                    }
+                }]
+            },
+        ]
+    },
     plugins: [
         new ModuleFederationPlugin({
             name : 'microFrontEnd2',

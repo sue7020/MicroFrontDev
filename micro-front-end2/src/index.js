@@ -1,1 +1,5 @@
-document.querySelector('#microFrontend2').innerHTML = `<h1>Micro-Front-End-2</h1> `
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('microFrontend2'));
