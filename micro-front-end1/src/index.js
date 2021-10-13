@@ -1,1 +1,5 @@
-document.querySelector('#root1').innerHTML = `<h1>Micro-Front-End-1</h1>`
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
