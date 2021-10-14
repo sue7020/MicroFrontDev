@@ -1,4 +1,5 @@
-import 'microFrontEnd1/MicroFrontEnd1Index';
-import 'microFrontEnd2/MicroFrontEnd2Index';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-console.log('Container!');
+ReactDOM.render(<App />, document.getElementById('root'));
